@@ -1,0 +1,16 @@
+{
+  "links": {
+    "es": {
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "aboutMe": "Sobre mi",
+      "contact": "Contacto"
+    },
+    "en": {
+      "experience": "Experience",
+      "projects": "Projects",
+      "aboutMe": "About Me",
+      "contact": "Contact"
+    }
+  }
+}
