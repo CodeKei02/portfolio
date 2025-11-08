@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "Portfolio Keilin Escobar - Front-End Developer",
+    "description": "Check out Keilin Escobar's projects. Front-End Developer. Specialized in building applications with amazing user experiences."
+  },
+  "hero": {
+    "title": "Hey, I'm Keilin",
+    "subtitle": {
+      "experience": "+1 year of experience",
+      "description": "I'm a Front-End Developer from Venezuela, specialized in creating attractive and functional user interfaces. I'm passionate about transforming ideas into exceptional digital experiences."
+    }
+  },
+  "titles": {
+    "experience": "Work Experience",
+    "projects": "Projects",
+    "about": "About Me"
+  },
+  "experiences": [
+    {
+      "date": "September 2025",
+      "title": "Front-End Developer",
+      "company": "Aliance",
+      "description": "Responsible for planning and creating reusable components for web applications. Applying the use of microfrontends with monorepos to optimize collaborative development."
+    }
+  ],
+  "projects": {
+    "personal-finance-app": {
+      "name": "Personal Finance App - Manage your finances easily",
+      "description": "A web page developed with React that allows users to manage their personal finances efficiently."
+    },
+    "audiophile-ecommerce": {
+      "name": "Audiophile Ecommerce - The store for music lovers",
+      "description": "An online store that offers a wide range of high-quality audio products, from headphones to speakers."
+    },
+    "healthy-recipe-finder": {
+      "name": "Healthy Recipe Finder - Find healthy recipes",
+      "description": "A web application that helps users find healthy and delicious recipes based on their dietary preferences."
+    },
+    "elite-dorada": {
+      "name": "Elite Dorada - Raffle Page",
+      "description": "A web page designed to manage raffles and contests efficiently and attractively."
+    }
+  }
+}
