@@ -1,0 +1,44 @@
+{
+  "page": {
+    "title": "Portafolio de Keilin Escobar - Desarrolladora Front-End",
+    "description": "Mira los proyectos de Keilin Escobar. Desarrolladora Front-End. Especializada en construir aplicaciones con experiencias de usuario increíbles."
+  },
+  "hero": {
+    "title": "Hey, soy Keilin",
+    "subtitle": {
+      "experience": "+1 año de experiencia",
+      "description": "Soy una Desarrolladora Front-End de Venezuela, especializada en crear interfaces de usuario atractivas y funcionales. Me apasiona transformar ideas en experiencias digitales excepcionales."
+    }
+  },
+  "titles": {
+    "experience": "Experiencia Laboral",
+    "projects": "Proyectos",
+    "about": "Sobre mí"
+  },
+  "experiences": [
+    {
+      "date": "Septiembre 2025",
+      "title": "Desarrolladora Front-End",
+      "company": "Aliance",
+      "description": "Responsable de la planificación y creación de componentes reutilizables para aplicaciones web. Aplicando el uso de los microfrontends con monorepos para optimizar el desarrollo colaborativo."
+    }
+  ],
+  "projects": {
+    "personal-finance-app": {
+      "name": "Personal Finance App - Administra tus finanzas fácilmente",
+      "description": "Una página web desarrollada con React que permite a los usuarios gestionar sus finanzas personales de manera eficiente."
+    },
+    "audiophile-ecommerce": {
+      "name": "Audiophile Ecommerce - La tienda para amantes de la música",
+      "description": "Una tienda en línea que ofrece una amplia gama de productos de audio de alta calidad, desde auriculares hasta altavoces."
+    },
+    "healthy-recipe-finder": {
+      "name": "Healthy Recipe Finder - Encuentra recetas saludables",
+      "description": "Una aplicación web que ayuda a los usuarios a encontrar recetas saludables y deliciosas según sus preferencias dietéticas."
+    },
+    "elite-dorada": {
+      "name": "Elite Dorada - Página de Sorteos",
+      "description": "Una página web diseñada para gestionar sorteos y concursos de manera eficiente y atractiva."
+    }
+  }
+}
