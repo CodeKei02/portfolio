@@ -3,14 +3,12 @@
     "es": {
       "experience": "Experiencia",
       "projects": "Proyectos",
-      "aboutMe": "Sobre mi",
-      "contact": "Contacto"
+      "aboutMe": "Sobre mi"
     },
     "en": {
       "experience": "Experience",
       "projects": "Projects",
-      "aboutMe": "About Me",
-      "contact": "Contact"
+      "aboutMe": "About Me"
     }
   }
 }
