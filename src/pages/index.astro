@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/react/Header.tsx';
-
+import HomePage from './home/HomePage.tsx';
 ---
 
 <Layout>
-	<Header client:load />
+
+</Layout>
+	<HomePage client:load duration={5000} />
 </Layout>
