@@ -23,22 +23,57 @@
       "description": "Responsable de la planificación y creación de componentes reutilizables para aplicaciones web. Aplicando el uso de los microfrontends con monorepos para optimizar el desarrollo colaborativo."
     }
   ],
-  "projects": {
-    "personal-finance-app": {
+  "projects": [
+    {
+      "id": 1,
       "name": "Personal Finance App - Administra tus finanzas fácilmente",
-      "description": "Una página web desarrollada con React que permite a los usuarios gestionar sus finanzas personales de manera eficiente."
+      "description": "Una página web desarrollada con React que permite a los usuarios gestionar sus finanzas personales de manera eficiente.",
+      "tecnologies": [
+        "React",
+        "TypeScript",
+        "Python",
+        "CSS",
+        "Firebase",
+        "Redux Toolkit"
+      ],
+      "url": "https://personal-finance-app-sigma.vercel.app/finance",
+      "repository": "https://github.com/CodeKei02/personal-finance-app"
     },
-    "audiophile-ecommerce": {
+    {
+      "id": 2,
       "name": "Audiophile Ecommerce - La tienda para amantes de la música",
-      "description": "Una tienda en línea que ofrece una amplia gama de productos de audio de alta calidad, desde auriculares hasta altavoces."
+      "description": "Una tienda en línea que ofrece una amplia gama de productos de audio de alta calidad, desde auriculares hasta altavoces.",
+      "tecnologies": ["React", "React Router", "CSS"],
+      "url": "https://audiophile-ecommerce-np1p.vercel.app/home",
+      "repository": "https://github.com/CodeKei02/audiophile-ecommerce"
     },
-    "healthy-recipe-finder": {
+    {
+      "id": 3,
       "name": "Healthy Recipe Finder - Encuentra recetas saludables",
-      "description": "Una aplicación web que ayuda a los usuarios a encontrar recetas saludables y deliciosas según sus preferencias dietéticas."
+      "description": "Una aplicación web que ayuda a los usuarios a encontrar recetas saludables y deliciosas según sus preferencias dietéticas.",
+      "tecnologies": [
+        "Astro",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Zustand"
+      ],
+      "url": "https://healthy-recipe-finder-gamma.vercel.app/recipes",
+      "repository": "https://github.com/CodeKei02/healthy-recipe-finder"
     },
-    "elite-dorada": {
+    {
+      "id": 4,
       "name": "Elite Dorada - Página de Sorteos",
-      "description": "Una página web diseñada para gestionar sorteos y concursos de manera eficiente y atractiva."
+      "description": "Una página web diseñada para gestionar sorteos y concursos de manera eficiente y atractiva.",
+      "tecnologies": [
+        "Astro",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Zustand",
+        "Supabase"
+      ],
+      "url": "https://elitedorada.com/home"
     }
-  }
+  ]
 }
