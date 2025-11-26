@@ -116,6 +116,13 @@ body {
   font-family: "Source Sans 3", sans-serif;
 }
 
+/* Smooth scrolling for in-page anchor links and offset for fixed navbar */
+html {
+  scroll-behavior: smooth;
+  /* Adjust this value to match your fixed navbar height so anchored sections are not hidden */
+  scroll-padding-top: 80px;
+}
+
 /* Animated 3-color gradient for header background */
 .animated-header-bg {
   background: linear-gradient(120deg, #ff7ab6 0%, #7c3cff 40%, #00ffd1 100%);
