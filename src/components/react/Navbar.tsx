@@ -19,7 +19,7 @@ export const Navbar = () => {
 
   const links = navigation.links[currentLang];
   return (
-    <NavigationMenu className="flex shadow-md gap-5 m-auto my-5 text-white py-1 px-5 rounded-full text-center backdrop-blur-md dark:bg-slate-900/20">
+    <NavigationMenu className="fixed z-[999] left-0 right-0 top-0 flex flex-wrap shadow-md gap-5 m-auto my-5 text-white py-1 px-5 rounded-full text-center backdrop-blur-md dark:bg-slate-900/20">
       <NavigationMenuList className="flex flex-row justify-center items-center gap-6">
         {Object.keys(links).map((item: string) => (
           <NavigationMenuItem key={item}>

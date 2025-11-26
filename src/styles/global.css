@@ -115,3 +115,144 @@
 body {
   font-family: "Source Sans 3", sans-serif;
 }
+
+/* Animated 3-color gradient for header background */
+.animated-header-bg {
+  background: linear-gradient(120deg, #ff7ab6 0%, #7c3cff 40%, #00ffd1 100%);
+  background-size: 600% 600%;
+  animation: gradientShift 12s ease infinite;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Optional subtle parallax movement (translate) for very soft motion */
+.animated-header-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Floating blurred bubbles for header background */
+.header-bubbles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.header-bubbles .bubble {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(24px) saturate(120%);
+  opacity: 0.45;
+  transform-origin: center;
+  will-change: transform, opacity;
+  animation: bubbleFloat 12s ease-in-out infinite;
+}
+.header-bubbles .bubble.small {
+  width: 80px;
+  height: 80px;
+}
+.header-bubbles .bubble.medium {
+  width: 160px;
+  height: 160px;
+}
+.header-bubbles .bubble.large {
+  width: 280px;
+  height: 280px;
+}
+
+/* color variants */
+.header-bubbles .bubble.color-a {
+  background: rgba(255, 122, 179, 0.9);
+}
+.header-bubbles .bubble.color-b {
+  background: rgba(124, 60, 255, 0.9);
+}
+.header-bubbles .bubble.color-c {
+  background: rgba(0, 255, 209, 0.9);
+}
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.45;
+  }
+  25% {
+    transform: translate3d(20px, -18px, 0) scale(1.05);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate3d(0, -36px, 0) scale(1.1);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate3d(-18px, -18px, 0) scale(1.03);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.45;
+  }
+}
+
+/* Responsive: reduce blur/size on small screens for performance */
+@media (max-width: 640px) {
+  .header-bubbles .bubble {
+    filter: blur(16px);
+    opacity: 0.38;
+  }
+  .header-bubbles .bubble.large {
+    width: 180px;
+    height: 180px;
+  }
+  .header-bubbles .bubble.medium {
+    width: 120px;
+    height: 120px;
+  }
+  .header-bubbles .bubble.small {
+    width: 60px;
+    height: 60px;
+  }
+  .animated-header-bg {
+    background-size: 400% 400%;
+  }
+}
+
+#underline {
+  animation: grow 2s alternate infinite;
+  background-color: rgba(255, 122, 179, 0.9);
+}
+
+@keyframes grow {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #underline {
+    animation: none;
+  }
+}

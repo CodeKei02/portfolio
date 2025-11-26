@@ -12,7 +12,6 @@ export const Entry = () => {
 
   const SPEED = 0.15;
 
-  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [videoPlaying, setVideoPlaying] = useState(false);
 
   useEffect(() => {
@@ -77,11 +76,9 @@ export const Entry = () => {
   useEffect(() => {
     if (!bgChanged) return;
     const id = window.setTimeout(() => {
-      const v = videoRef.current;
-      if (v) {
-        v.play().catch(() => {});
-        setVideoPlaying(true);
-      }
+      // Video background removed — mark the sequence as completed so
+      // the loading counter and subsequent UI can proceed.
+      setVideoPlaying(true);
     }, 1000);
     return () => window.clearTimeout(id);
   }, [bgChanged]);
@@ -127,7 +124,7 @@ export const Entry = () => {
     <div
       ref={containerRef}
       className={`${
-        bgChanged ? "transition-y duration-1000" : "bg-black"
+        bgChanged ? "transition-y duration-1000 animated-header-bg" : "bg-black"
       } w-[100%] h-[100vh] p-4 m-auto grid justify-center items-center min-w-full relative`}
       style={{
         ["--mx" as string]: "-200px",
@@ -191,26 +188,6 @@ export const Entry = () => {
           mixBlendMode: "overlay",
         }}
       ></div>
-
-      <video
-        ref={videoRef}
-        src="/video/background.mp4"
-        aria-hidden
-        muted
-        loop
-        playsInline
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          zIndex: 10,
-          opacity: videoPlaying ? 1 : 0,
-          transition: "opacity 400ms ease",
-          pointerEvents: "none",
-        }}
-      />
 
       <div
         aria-hidden
