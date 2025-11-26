@@ -6,8 +6,8 @@
   "hero": {
     "title": "Hey, soy Keilin",
     "subtitle": {
-      "experience": "+1 año de experiencia",
-      "description": "Soy una Desarrolladora Front-End de Venezuela, especializada en crear interfaces de usuario atractivas y funcionales. Me apasiona transformar ideas en experiencias digitales excepcionales."
+      "specialized": "Desarrolladora Front-End",
+      "description": "Especializada en crear interfaces de usuario atractivas y funcionales. Me apasiona transformar ideas en experiencias digitales excepcionales."
     }
   },
   "titles": {

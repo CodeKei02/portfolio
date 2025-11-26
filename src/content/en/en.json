@@ -6,8 +6,8 @@
   "hero": {
     "title": "Hey, I'm Keilin",
     "subtitle": {
-      "experience": "+1 year of experience",
-      "description": "I'm a Front-End Developer from Venezuela, specialized in creating attractive and functional user interfaces. I'm passionate about transforming ideas into exceptional digital experiences."
+      "specialized": "Front-End Developer",
+      "description": "Specialized in creating attractive and functional user interfaces. I'm passionate about transforming ideas into exceptional digital experiences."
     }
   },
   "titles": {
