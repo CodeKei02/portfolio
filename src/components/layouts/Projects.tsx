@@ -55,7 +55,7 @@ export const Projects = ({
 }) => {
   return (
     <div className="h-auto pb-20 pt-10 px-4 text-white relative">
-      <Title text={title} />
+      <Title text={title} id="projects" />
       <ol className="w-[90%] mx-auto mt-10 flex flex-col gap-10">
         {data.projects.map((item, index) => (
           <div
@@ -65,12 +65,13 @@ export const Projects = ({
             <a
               href={item.url}
               target="_blank"
-              className="w-full animated-header-bg mb-4 mx-auto xl:mx-0 md:max-w-[350px] lg:max-w-[600px] xl:max-w-[800px]  rounded-md px-3 py-6 mb-5"
+              rel="noopener noreferrer"
+              className="w-full animated-header-bg mb-4 mx-auto xl:mx-0 md:max-w-[300px] lg:max-w-[450px] xl:max-w-[650px] group overflow-hidden rounded-lg px-3 py-6 mb-5"
             >
               <img
                 src={images[index].src}
                 alt={images[index].alt}
-                className="md:object-cover rounded-lg mx-auto xl:max-w-[600px]"
+                className="w-[500px] md:object-cover rounded-lg mx-auto transform transition-transform duration-500 ease-out group-hover:scale-105"
                 style={{
                   boxShadow: "inset 0px -2px 10px 10px #000",
                 }}
