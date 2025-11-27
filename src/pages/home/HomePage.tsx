@@ -11,6 +11,8 @@ import { Projects } from "@/components/layouts/Projects";
 import { AboutMe } from "@/components/layouts/AboutMe";
 import { Footer } from "@/components/layouts/Footer";
 import navigation from "@/content/navigation.json";
+import { Button } from "@/components/react/Button";
+import { Download } from "lucide-react";
 
 const CONTENT: Record<Language, any> = {
   en,
@@ -59,8 +61,26 @@ export default function HomePage({ duration = 1000 }: { duration?: number }) {
           <Entry />
         </div>
       ) : (
-        <>
+        <div className="relative">
           <Header data={data} />
+          <Button
+            href={
+              lang === "es"
+                ? "/downloads/Keilin_CV_ES.pdf"
+                : "/downloads/Keilin_CV_EN.pdf"
+            }
+            text="CV"
+            download
+            style={{
+              width: "100px",
+              position: "fixed",
+              right: 10,
+              bottom: 50,
+              zIndex: 50,
+            }}
+          >
+            <Download />
+          </Button>
           <div className="bg-black/90 h-auto">
             <Experience data={data} title={data.titles.experience} />
             <Projects data={data} title={data.titles.projects} />
@@ -68,7 +88,7 @@ export default function HomePage({ duration = 1000 }: { duration?: number }) {
             <hr className="w-[90%] mt-6 mx-auto opacity-20 text-white" />
             <Footer links={navigationLinks} />
           </div>
-        </>
+        </div>
       )}
     </>
   );
