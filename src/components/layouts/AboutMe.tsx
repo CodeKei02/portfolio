@@ -13,7 +13,7 @@ export const AboutMe = ({
   return (
     <div className="w-[90%] mx-auto h-auto py-10 px-4 text-white">
       <Title text={title} id="aboutMe" />
-      <div className="flex flex-col lg:flex-row lg:gap-5 lg:items-center">
+      <div className="flex flex-col lg:flex-row lg:gap-5 lg:items-center mt-5">
         <div className="relative mx-auto mt-6 mb-6 w-52 h-52">
           <div className="absolute inset-0 rounded-full border-2 border-pink-500/80 animate-[spin_6s_linear_infinite]"></div>
           <img
