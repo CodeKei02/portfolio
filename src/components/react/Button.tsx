@@ -18,7 +18,6 @@ export const Button = ({
   const isExternal =
     typeof external === "boolean" ? external : /^(https?:)?\/\//.test(href);
 
-  // React will add the `download` attribute if this is true or a string filename
   const downloadAttr = download
     ? typeof download === "string"
       ? download
