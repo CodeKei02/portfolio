@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, Suspense } from "react";
+import React, { useEffect, useRef, useState, Suspense } from "react";
 import { Navbar } from "./Navbar";
 import { Button } from "./Button";
 import { Canvas } from "@react-three/fiber";
@@ -20,6 +20,34 @@ export default function Header({ data }: { data: Hero }) {
       controls.update();
     }
   }, []);
+
+  function TypingText({ text, speed = 150 }: { text: string; speed?: number }) {
+    const [display, setDisplay] = useState("");
+
+    useEffect(() => {
+      const id = setInterval(() => {
+        setDisplay((prev) => {
+          const nextIndex = prev.length;
+          if (nextIndex < text.length) {
+            return prev + text.charAt(nextIndex);
+          } else {
+            clearInterval(id);
+            return prev;
+          }
+        });
+      }, speed);
+      return () => clearInterval(id);
+    }, [text, speed]);
+
+    return (
+      <span className="inline-block">
+        {display}
+        <span className="ml-1 inline-block text-white font-bold animate-pulse">
+          |
+        </span>
+      </span>
+    );
+  }
 
   return (
     <header className="w-full  relative pt-5 px-4 m-auto h-[100vh] max-h-[800px]">
@@ -55,12 +83,17 @@ export default function Header({ data }: { data: Hero }) {
       <div className="relative z-20 mx-auto mt-20 px-4 py-4 flex flex-col items-center lg:flex-row lg:w-[90%]">
         <div className="text-center lg:text-left">
           <h1 className="text-2xl font-bold lg:text-4xl">{data.hero.title}</h1>
-          <p className="text-sm mt-1 text-[1rem] lg:text-[1.25rem]">
-            <span className="font-bold italic">
-              {data.hero.subtitle.experience}.{" "}
-            </span>
+          <div className=" text-sm mt-1 text-[1rem] lg:text-[1.25rem]">
+            <p className="flex justify-center items-center gap-2">
+              <span className="text-white font-extrabold text-4xl">{`<`}</span>
+              <span className="text-2xl font-bold">
+                <TypingText text={data.hero.subtitle.specialized} />
+              </span>
+              <span className="text-white font-extrabold text-4xl">{`/>`}</span>
+            </p>
+
             {data.hero.subtitle.description}
-          </p>
+          </div>
           <div className="flex gap-5 mt-10 justify-center lg:justify-start lg:w-3/4">
             <Button
               href="https://www.linkedin.com/in/keilin-escobar-01045032a"

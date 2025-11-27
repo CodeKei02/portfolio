@@ -4,7 +4,7 @@ export interface PageMeta {
 }
 
 export interface HeroSubtitle {
-  experience: string;
+  specialized: string;
   description: string;
 }
 
