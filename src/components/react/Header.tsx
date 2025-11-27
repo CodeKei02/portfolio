@@ -84,7 +84,7 @@ export default function Header({ data }: { data: Hero }) {
         <div className="text-center lg:text-left">
           <h1 className="text-2xl font-bold lg:text-4xl">{data.hero.title}</h1>
           <div className=" text-sm mt-1 text-[1rem] lg:text-[1.25rem]">
-            <p className="flex justify-center items-center gap-2">
+            <p className="w-full flex justify-center items-center lg:justify-start mt-5 gap-2">
               <span className="text-white font-extrabold text-4xl">{`<`}</span>
               <span className="text-2xl font-bold">
                 <TypingText text={data.hero.subtitle.specialized} />
