@@ -10,7 +10,7 @@ export const Experience = ({
 }) => {
   return (
     <div className=" h-auto py-20 px-4 text-white relative">
-      <Title text={title} />
+      <Title text={title} id="experience" />
       <div className="w-[90%] mx-auto mt-10">
         {data.experiences.map((item, index) => (
           <div key={index} className="mb-10">
