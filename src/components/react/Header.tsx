@@ -11,16 +11,6 @@ import { LinkedInIcon } from "../icons/contact/index.jsx";
 export default function Header({ data }: { data: Hero }) {
   const controlsRef = useRef<any>(null);
 
-  useEffect(() => {
-    const controls = controlsRef.current;
-    if (!controls) return;
-    const target = [0, -0.15, 0];
-    if (controls.target) {
-      controls.target.set(target[0], target[1], target[2]);
-      controls.update();
-    }
-  }, []);
-
   function TypingText({ text, speed = 150 }: { text: string; speed?: number }) {
     const [display, setDisplay] = useState("");
 
@@ -50,7 +40,7 @@ export default function Header({ data }: { data: Hero }) {
   }
 
   return (
-    <header className="w-full  relative pt-5 px-4 m-auto h-[100vh] max-h-[800px]">
+    <header className="w-full relative pt-5 px-4 m-auto h-[100vh] max-h-[800px]">
       <div className="animated-header-bg absolute inset-0 z-0 pointer-events-none" />
       <div className="header-bubbles" style={{ zIndex: 5 }} aria-hidden>
         <div
@@ -80,7 +70,7 @@ export default function Header({ data }: { data: Hero }) {
       </div>
 
       <Navbar />
-      <div className="relative z-20 mx-auto mt-20 px-4 py-4 flex flex-col items-center lg:flex-row lg:w-[90%]">
+      <div className="relative z-20 mx-auto mt-50 md:mt-20 px-4 py-4 flex flex-col md:flex-col items-center lg:flex-row lg:w-[90%]">
         <div className="text-center lg:text-left">
           <h1 className="text-2xl font-bold lg:text-4xl">{data.hero.title}</h1>
           <div className=" text-sm mt-1 text-[1rem] lg:text-[1.25rem]">
@@ -108,6 +98,7 @@ export default function Header({ data }: { data: Hero }) {
         </div>
 
         <div
+          className="hidden md:block"
           style={{
             width: "100%",
             height: 500,
