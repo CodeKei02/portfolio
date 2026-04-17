@@ -69,21 +69,6 @@ export const AboutMe = ({
             </p>
           )}
           <div className="mt-5 flex gap-5">
-            {showContactMe && (
-              <Button
-                style={{
-                  marginTop: "10px",
-                  width: "150px",
-                  borderColor: "#ff7ab6",
-                  boxShadow: "inset 0px -2px 0px 1px #ff7ab6",
-                }}
-                href="mailto:keicode.dev02@gmail.com"
-                text={language === "es" ? "Contactame" : "Contact Me"}
-              >
-                <Mail className="w-5 h-5" />
-              </Button>
-            )}
-
             <LinkedInButton style={true} />
           </div>
         </div>
