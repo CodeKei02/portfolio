@@ -10,8 +10,8 @@ import SUPPORT_LANGUAGES, {
 } from "@/support-languages";
 import useLanguageStore from "@/store/useLanguageStore";
 import { Earth, ChevronDown } from "lucide-react";
-import Spain from "/public/es.jpg";
-import USA from "/public/en.png";
+const SPAIN_FLAG = "/es.jpg";
+const USA_FLAG = "/en.png";
 
 export const Dropdown = () => {
   const setLang = useLanguageStore((s) => s.setLang);
@@ -34,8 +34,9 @@ export const Dropdown = () => {
             `}
         >
           <img
-            src={Spain.src}
+            src={SPAIN_FLAG}
             alt="Spanish"
+            loading="lazy"
             className="w-6 h-4 mr-2 rounded-sm"
           />
           {LANGUAGE_LABEL.es}
@@ -51,7 +52,7 @@ export const Dropdown = () => {
           }
         >
           <img
-            src={USA.src}
+            src={USA_FLAG}
             alt="English"
             className="w-6 h-4 mr-2 rounded-sm"
           />
