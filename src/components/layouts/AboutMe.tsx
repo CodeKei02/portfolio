@@ -1,7 +1,6 @@
 import { Title } from "../react/Title.tsx";
 import Me from "../../../public/keilin-photo.png";
 import { Button } from "../react/Button.tsx";
-import { Mail } from "lucide-react";
 import { LinkedInButton } from "./LinkedInButton.tsx";
 export const AboutMe = ({
   title,
