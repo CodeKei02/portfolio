@@ -6,8 +6,8 @@
   "hero": {
     "title": "Hey, I'm Keilin",
     "subtitle": {
-      "specialized": "Front-End Developer",
-      "description": "Specialized in creating attractive and functional user interfaces. I'm passionate about transforming ideas into exceptional digital experiences."
+      "specialized": "Web Developer",
+      "description": "Specialized in building applications with optimal user experiences, clean and efficient code, and a focus on collaboration and teamwork. I'm passionate about transforming ideas into exceptional digital experiences."
     }
   },
   "titles": {
@@ -19,19 +19,24 @@
     {
       "date": "September 2025",
       "title": "Front-End Developer",
-      "company": "Aliance",
-      "description": "Responsible for planning and creating reusable components for web applications. Applying the use of microfrontends with monorepos to optimize collaborative development."
+      "description": "Together with a Backend developer, we were responsible for developing the frontend layer of a multi-tenant raffle platform using monorepo and micro front-end architecture, allowing multiple independent instances to be deployed with shared code. Implemented a monorepo with Nx to manage multiple independent frontend applications. Designed and developed a reusable component system with Astro and Tailwind. Integrated with Supabase. Implemented payment flows and ticket management. The technologies used include Astro, React, TypeScript, and Supabase.",
+      "projects": [
+        {
+          "name": "Elite Dorada y Tony Rifas - Raffle Page",
+          "description": "Designed the UI/UX and developed a web page to efficiently and attractively manage raffles and contests, using technologies such as Astro, React, TypeScript, Tailwind CSS, Zustand, and Supabase."
+        }
+      ]
     }
   ],
   "projects": [
     {
       "id": 1,
       "name": "Personal Finance App - Manage your finances easily",
-      "description": "A web page developed with React that allows users to manage their personal finances efficiently.",
+      "description": "A web platform that allows users to manage their personal finances efficiently. It includes features such as transaction tracking, budgeting, savings, and reports for recurring bills. It was developed with React and TypeScript, using React Router for navigation, Redux Toolkit for state management, and Firebase for authentication and data storage. Python was also implemented for automation in the transactions section, where your transactions can be reflected in your Google Sheet.",
       "tecnologies": [
         "React",
-        "Python",
         "TypeScript",
+        "Python",
         "CSS",
         "Firebase",
         "Redux Toolkit"
@@ -41,16 +46,24 @@
     },
     {
       "id": 2,
+      "name": "Aurum Restaurante Premium - The luxury culinary experience",
+      "description": "A responsive website with an elegant interface, a hero section with a parallax effect using the GSAP library, a history section with animations, a menu with dynamic tabs, an ambiance section with an image gallery carousel implemented with Swiper, and a reservations section where each reservation is stored in a MongoDB database through a REST API developed with Node.js and Express. The technologies used include React, Astro, Node.js, Express, and Tailwind CSS.",
+      "tecnologies": ["React", "Astro", "Node.js", "Express", "Tailwind CSS"],
+      "url": "https://aurum-restaurant-iota.vercel.app",
+      "repository": "https://github.com/CodeKei02/aurum-restaurant"
+    },
+    {
+      "id": 3,
       "name": "Audiophile Ecommerce - The store for music lovers",
-      "description": "An online store that offers a wide range of high-quality audio products, from headphones to speakers.",
+      "description": "An online store that offers a wide range of high-quality audio products, from headphones to speakers. The platform features an attractive and user-friendly interface, allowing users to browse product categories, view product details, add products to the shopping cart, and complete the checkout process. It was developed using React for building the user interface, React Router for page navigation, and CSS for visual design and styling.",
       "tecnologies": ["React", "React Router", "CSS"],
       "url": "https://audiophile-ecommerce-np1p.vercel.app/home",
       "repository": "https://github.com/CodeKei02/audiophile-ecommerce"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Healthy Recipe Finder - Find healthy recipes",
-      "description": "A web application that helps users find healthy and delicious recipes based on their dietary preferences.",
+      "description": "A web application that helps users find healthy and delicious recipes based on their dietary preferences. The platform has an intuitive and easy-to-use interface, allowing users to search recipes, filter by ingredients and categories, and save their favorite recipes. It was developed using Astro for the project structure, React for building the user interface, TypeScript for static typing, Tailwind CSS for visual design and styling, and Zustand for global state management.",
       "tecnologies": [
         "Astro",
         "React",
@@ -60,20 +73,6 @@
       ],
       "url": "https://healthy-recipe-finder-gamma.vercel.app/recipes",
       "repository": "https://github.com/CodeKei02/healthy-recipe-finder"
-    },
-    {
-      "id": 4,
-      "name": "Elite Dorada - Raffle Page",
-      "description": "A web page designed to manage raffles and contests efficiently and attractively.",
-      "tecnologies": [
-        "Astro",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Zustand",
-        "Supabase"
-      ],
-      "url": "https://elitedorada.com/home"
     }
   ]
 }

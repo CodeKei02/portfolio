@@ -6,8 +6,8 @@
   "hero": {
     "title": "Hey, soy Keilin",
     "subtitle": {
-      "specialized": "Desarrolladora Front-End",
-      "description": "Especializada en crear interfaces de usuario atractivas y funcionales. Me apasiona transformar ideas en experiencias digitales excepcionales."
+      "specialized": "Desarrolladora Web",
+      "description": "Especializada en construir aplicaciones con experiencias de usuario óptimas, con código limpio y eficiente, y con un enfoque en la colaboración y el trabajo en equipo. Me apasiona transformar ideas en experiencias digitales excepcionales."
     }
   },
   "titles": {
@@ -19,15 +19,20 @@
     {
       "date": "Septiembre 2025",
       "title": "Desarrolladora Front-End",
-      "company": "Aliance",
-      "description": "Responsable de la planificación y creación de componentes reutilizables para aplicaciones web. Aplicando el uso de los microfrontends con monorepos para optimizar el desarrollo colaborativo."
+      "description": "Conjunto a un desarrollador Backend fuimos responsables de desarrollar la capa frontend de una plataforma multi-tenant de sorteos utilizando arquitectura de monorepo y micro front-ends, permitiendo desplegar múltiples instancias independientes con código compartido. Implementación de monorepo con Nx para gestionar múltiples aplicaciones frontend independientes. Diseño y desarrollo de sistema de componentes reutilizables con Astro y Tailwind. Integración con Supabase. Implementación de flujos de pago y gestión de boletos. Las tecnologías utilizadas incluyen Astro, React, TypeScript, y Supabase.",
+      "projects": [
+        {
+          "name": "Elite Dorada y Tony Rifas - Página de Sorteos",
+          "description": "Diseñé la interfaz UI/UX y desarrollé una página web para gestionar sorteos y concursos de manera eficiente y atractiva, utilizando tecnologías como Astro, React, TypeScript, Tailwind CSS, Zustand y Supabase."
+        }
+      ]
     }
   ],
   "projects": [
     {
       "id": 1,
       "name": "Personal Finance App - Administra tus finanzas fácilmente",
-      "description": "Una página web desarrollada con React que permite a los usuarios gestionar sus finanzas personales de manera eficiente.",
+      "description": "Una plataforma web que permite a los usuarios gestionar sus finanzas personales de manera eficiente. Cuenta con funcionalidades cómo seguimiento de tus transacciones, presupuestos, ahorros y reportes de tus facturas recurrentes. Fue desarrollada con React y Typescript, haciendo uso de React Router para la navegación, Redux Toolkit para el manejo de estado y Firebase para la autenticación y almacenamiento de datos. También se implementó Python para una automatización en el apartado de transacciones donde tus transacciones puedes verlas reflejadas en tu Google Sheet.",
       "tecnologies": [
         "React",
         "TypeScript",
@@ -41,16 +46,24 @@
     },
     {
       "id": 2,
+      "name": "Aurum Restaurante Premium - Experiencia culinaria de lujo",
+      "description": "Página web responsiva con una elegante interfaz, un hero con un efecto parallax usando la librería de GSAP, una seccion de historia con animaciones, un menú con tabs dinamicos, ambiente con un carrusel de galeria de imagenes implementado con Swiper y una seccion de reservaciones de la cúal cada reservación se almacena en una base de datos de MongoDB a través de una API REST desarrollada con Node.js y Express. Las tecnologías utilizadas incluyen React, Astro, Node.js, Express y Tailwind CSS.",
+      "tecnologies": ["React", "Astro", "Node.js", "Express", "Tailwind CSS"],
+      "url": "https://aurum-restaurant-iota.vercel.app",
+      "repository": "https://github.com/CodeKei02/aurum-restaurant"
+    },
+    {
+      "id": 3,
       "name": "Audiophile Ecommerce - La tienda para amantes de la música",
-      "description": "Una tienda en línea que ofrece una amplia gama de productos de audio de alta calidad, desde auriculares hasta altavoces.",
+      "description": "Una tienda en línea que ofrece una amplia gama de productos de audio de alta calidad, desde auriculares hasta altavoces. La plataforma cuenta con una interfaz atractiva y fácil de usar, permitiendo a los usuarios navegar por las categorías de productos, ver detalles de cada producto, agregar productos al carrito de compras y realizar el proceso de pago. Fue desarrollada utilizando React para la construcción de la interfaz de usuario, React Router para la navegación entre páginas, y CSS para el diseño y estilo visual del sitio.",
       "tecnologies": ["React", "React Router", "CSS"],
       "url": "https://audiophile-ecommerce-np1p.vercel.app/home",
       "repository": "https://github.com/CodeKei02/audiophile-ecommerce"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Healthy Recipe Finder - Encuentra recetas saludables",
-      "description": "Una aplicación web que ayuda a los usuarios a encontrar recetas saludables y deliciosas según sus preferencias dietéticas.",
+      "description": "Una aplicación web que ayuda a los usuarios a encontrar recetas saludables y deliciosas según sus preferencias dietéticas. La plataforma cuenta con una interfaz intuitiva y fácil de usar, permitiendo a los usuarios buscar recetas, filtrar por ingredientes y categorías, y guardar sus recetas favoritas. Fue desarrollada utilizando Astro para la estructura del proyecto, React para la construcción de la interfaz de usuario, TypeScript para la tipificación estática, Tailwind CSS para el diseño y estilo visual, y Zustand para el manejo del estado global.",
       "tecnologies": [
         "Astro",
         "React",
@@ -60,20 +73,6 @@
       ],
       "url": "https://healthy-recipe-finder-gamma.vercel.app/recipes",
       "repository": "https://github.com/CodeKei02/healthy-recipe-finder"
-    },
-    {
-      "id": 4,
-      "name": "Elite Dorada - Página de Sorteos",
-      "description": "Una página web diseñada para gestionar sorteos y concursos de manera eficiente y atractiva.",
-      "tecnologies": [
-        "Astro",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Zustand",
-        "Supabase"
-      ],
-      "url": "https://elitedorada.com/home"
     }
   ]
 }
