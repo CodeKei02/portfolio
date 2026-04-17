@@ -6,10 +6,8 @@ export const Footer = ({ links }: { links: { [key: string]: string } }) => {
           {Object.keys(links).map((link, index) => (
             <a
               key={index}
-              href={link}
-              className="text-sm text-white hover:text-white mx-2"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`#${link}`}
+              className="text-sm text-white hover:text-white mx-2 z-10"
             >
               {link.charAt(0).toUpperCase() + link.slice(1)}
             </a>

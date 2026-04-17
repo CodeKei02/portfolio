@@ -19,7 +19,7 @@ export const Navbar = () => {
     throw new Error(`Unsupported language: ${currentLang}`);
   }
 
-  const links = navigation.links[currentLang];
+  const links: { [key: string]: string } = navigation.links[currentLang];
   return (
     <NavigationMenu className="fixed z-[999] left-0 right-0 top-0 md:flex md:flex-wrap md:shadow-md md:gap-5 md:m-auto md:my-5 text-white md:py-1 md:px-5 md:rounded-full md:text-center md:backdrop-blur-md md:dark:bg-slate-900/20">
       <div

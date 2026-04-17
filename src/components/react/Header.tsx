@@ -7,6 +7,7 @@ import { Model } from "../../../Keilin-3d.jsx";
 import type Hero from "@/types/content.js";
 import { GitHubIcon } from "../icons/tools/index.jsx";
 import { LinkedInIcon } from "../icons/contact/index.jsx";
+import { LinkedInButton } from "../layouts/LinkedInButton.jsx";
 
 export default function Header({ data }: { data: Hero }) {
   const controlsRef = useRef<any>(null);
@@ -85,12 +86,7 @@ export default function Header({ data }: { data: Hero }) {
             {data.hero.subtitle.description}
           </div>
           <div className="flex gap-5 mt-10 justify-center lg:justify-start lg:w-3/4">
-            <Button
-              href="https://www.linkedin.com/in/keilin-escobar-01045032a"
-              text="LinkedIn"
-            >
-              <LinkedInIcon className="w-5 h-5" />
-            </Button>
+            <LinkedInButton />
             <Button href="https://github.com/CodeKei02" text="GitHub">
               <GitHubIcon className="w-5 h-5" />
             </Button>

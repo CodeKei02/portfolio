@@ -2,7 +2,7 @@ import { Title } from "../react/Title.tsx";
 import Me from "../../../public/keilin-photo.png";
 import { Button } from "../react/Button.tsx";
 import { Mail } from "lucide-react";
-import { LinkedInIcon } from "../icons/contact/index.tsx";
+import { LinkedInButton } from "./LinkedInButton.tsx";
 export const AboutMe = ({
   title,
   language,
@@ -10,6 +10,8 @@ export const AboutMe = ({
   title: string;
   language: string;
 }) => {
+  const showContactMe =
+    String(import.meta.env.PUBLIC_SHOW_CONTACTME).toLowerCase() === "true";
   return (
     <div className="w-[90%] mx-auto h-auto py-10 px-4 text-white">
       <Title text={title} id="aboutMe" />
@@ -26,69 +28,63 @@ export const AboutMe = ({
           {language === "es" ? (
             <p>
               <span className="font-bold text-[#ff7ab6]">
-                Desarrolladora Front-end
+                Desarrolladora Web
               </span>{" "}
-              autodidacta de Venezuela, tengo 2 años de experiencia en el área,
-              mi enfoque combina diseño intuitivo y código limpio y escalable,
-              utilizando tecnologías modernas cómo{" "}
+              autodidacta de Venezuela, tengo más de 2 años de experiencia en el
+              área, mi enfoque combina diseño intuitivo y código limpio y
+              escalable, utilizando tecnologías modernas cómo{" "}
               <span className="font-bold text-[#ff7ab6]">
-                React, TypeScript, Next.js y Tailwind CSS
+                React, TypeScript, Next.js, Node, Express y Tailwind CSS
               </span>
-              . También cuento con conocimientos en Python, lo que me permite
-              tener una visión más completa del desarrollo web. Me gusta
+              . También cuento con conocimientos en{" "}
+              <span className="font-bold text-[#ff7ab6]">Python</span>. Me gusta
               trabajar en proyectos que desafían mi creatividad y lógica, más
-              allá del código, valoro la colaboración, la mejora continua y el
-              impacto que una buena interfaz puede tener en la vida de las
-              personas. Estoy en constante aprendizaje, buscando nuevas formas
-              de optimizar procesos mejorar la experiencia del usuario y aportar
-              soluciones prácticas
+              allá del código, valoro la colaboración y la mejora continua. He
+              trabajado en proyectos que han sido desafiantes, como el
+              desarrollo de una arquitectura de monorepo con microfrontends para
+              una plataforma de sorteos, y una aplicación de finanzas personales
+              con automatización en Python. Estoy constantemente aprendiendo,
+              buscando nuevas formas de optimizar procesos, mejorar la
+              experiencia del usuario y brindar soluciones prácticas.
             </p>
           ) : (
             <p>
               Self-taught{" "}
-              <span className="font-bold text-[#ff7ab6]">
-                Front-end Developer
-              </span>{" "}
-              from Venezuela, with 1 year of experience in the field, my
+              <span className="font-bold text-[#ff7ab6]">Web Developer</span>{" "}
+              from Venezuela, with +2 years of experience in the field, my
               approach combines intuitive design and clean, scalable code, using
               modern technologies such as{" "}
               <span className="font-bold text-[#ff7ab6]">
-                React, TypeScript, Next.js, and Tailwind CSS
+                React, TypeScript, Next.js, Node, Express, and Tailwind CSS
               </span>
-              . I also have knowledge of Python, which allows me to have a more
-              comprehensive view of web development. I enjoy working on projects
-              that challenge my creativity and logic; beyond code, I value
-              collaboration, continuous improvement, and the impact a good
-              interface can have on people's lives. I am constantly learning,
-              seeking new ways to optimize processes, enhance user experience,
-              and provide practical solutions
+              . I also have knowledge in{" "}
+              <span className="font-bold text-[#ff7ab6]">Python</span>. I enjoy
+              working on projects that challenge my creativity and logic, beyond
+              code, I value collaboration and continuous improvement. I've
+              worked on projects that have been challenging, such as developing
+              a monorepo architecture with microfrontends for a raffle platform,
+              and a personal finance application with automation in Python. I'm
+              constantly learning, seeking new ways to optimize processes,
+              enhance user experience, and provide practical solutions.
             </p>
           )}
           <div className="mt-5 flex gap-5">
-            <Button
-              style={{
-                marginTop: "10px",
-                width: "150px",
-                borderColor: "#ff7ab6",
-                boxShadow: "inset 0px -2px 0px 1px #ff7ab6",
-              }}
-              href="mailto:keicode.dev02@gmail.com"
-              text={language === "es" ? "Contactame" : "Contact Me"}
-            >
-              <Mail className="w-5 h-5" />
-            </Button>
-            <Button
-              style={{
-                marginTop: "10px",
-                width: "120px",
-                borderColor: "#ff7ab6",
-                boxShadow: "inset 0px -2px 0px 1px #ff7ab6",
-              }}
-              href="https://www.linkedin.com/in/keilin-escobar-01045032a/"
-              text="LinkedIn"
-            >
-              <LinkedInIcon className="w-5 h-5" />
-            </Button>
+            {showContactMe && (
+              <Button
+                style={{
+                  marginTop: "10px",
+                  width: "150px",
+                  borderColor: "#ff7ab6",
+                  boxShadow: "inset 0px -2px 0px 1px #ff7ab6",
+                }}
+                href="mailto:keicode.dev02@gmail.com"
+                text={language === "es" ? "Contactame" : "Contact Me"}
+              >
+                <Mail className="w-5 h-5" />
+              </Button>
+            )}
+
+            <LinkedInButton style={true} />
           </div>
         </div>
       </div>

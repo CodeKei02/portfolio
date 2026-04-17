@@ -19,6 +19,12 @@ const images = [
   { src: "/projects/project-4.jpg", alt: "Project 4" },
 ];
 
+const fallbackImage = { src: "/projects/project-1.jpg", alt: "Project" };
+
+function getProjectImage(index: number) {
+  return images[index] ?? fallbackImage;
+}
+
 function getIconByName(name: string) {
   if (name === "Astro") {
     return <AstroIcon className="w-6 h-6" />;
@@ -57,57 +63,48 @@ export const Projects = ({
     <div className="h-auto pb-20 pt-10 px-4 text-white relative">
       <Title text={title} id="projects" />
       <ol className="w-[90%] mx-auto mt-10 flex flex-col gap-10">
-        {data.projects.map((item, index) => (
-          <div
-            className="flex flex-col md:flex-row md:items-center md:gap-6 xl:gap-10"
-            key={item.id}
-          >
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full animated-header-bg mb-4 mx-auto xl:mx-0 md:max-w-[300px] lg:max-w-[450px] xl:max-w-[650px] group overflow-hidden rounded-lg px-3 py-6 mb-5"
+        {data.projects.map((item, index) => {
+          const image = getProjectImage(index);
+
+          return (
+            <div
+              className="flex flex-col md:flex-row md:items-center md:gap-6 xl:gap-10"
+              key={item.id}
             >
-              <img
-                src={images[index].src}
-                alt={images[index].alt}
-                className="w-[500px] md:object-cover rounded-lg mx-auto transform transition-transform duration-500 ease-out group-hover:scale-105"
-                style={{
-                  boxShadow: "inset 0px -2px 10px 10px #000",
-                }}
-              />
-            </a>
-            <li key={item.id} className="mb-10 mt-2">
-              <h3 className="text-xl font-semibold my-2">{item.name}</h3>
-              <ul className="mt-2 flex flex-wrap gap-2">
-                {item.tecnologies.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-full px-3 py-1 text-sm bg-gray-700 text-white flex items-center gap-1"
-                  >
-                    {getIconByName(tech)}
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4">{item.description}</p>
-              <div className="flex gap-4">
-                <Button
-                  href={item.url}
-                  text="Preview"
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full animated-header-bg mb-4 mx-auto xl:mx-0 md:min-w-[300px] md:max-w-[300px] lg:min-w-[450px] lg:max-w-[450px] xl:min-w-[650px] xl:max-w-[650px] group overflow-hidden rounded-lg px-3 py-6 mb-5"
+              >
+                <img
+                  src={image.src}
+                  loading="lazy"
+                  alt={image.alt}
+                  className="w-[500px] md:object-cover rounded-lg mx-auto transform transition-transform duration-500 ease-out group-hover:scale-105"
                   style={{
-                    marginTop: "10px",
-                    width: "120px",
-                    borderColor: "#ff7ab6",
-                    boxShadow: "inset 0px -2px 0px 1px #ff7ab6",
+                    boxShadow: "inset 0px -2px 10px 10px #000",
                   }}
-                >
-                  <PreviewIcon className="w-5 h-5" />
-                </Button>
-                {item.repository && (
+                />
+              </a>
+              <li key={item.id} className="mb-10 mt-2">
+                <h3 className="text-xl font-semibold my-2">{item.name}</h3>
+                <ul className="mt-2 flex flex-wrap gap-2">
+                  {item.tecnologies.map((tech) => (
+                    <li
+                      key={tech}
+                      className="rounded-full px-3 py-1 text-sm bg-gray-700 text-white flex items-center gap-1"
+                    >
+                      {getIconByName(tech)}
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4">{item.description}</p>
+                <div className="flex gap-4">
                   <Button
-                    href={item.repository}
-                    text="Code"
+                    href={item.url}
+                    text="Preview"
                     style={{
                       marginTop: "10px",
                       width: "120px",
@@ -115,13 +112,27 @@ export const Projects = ({
                       boxShadow: "inset 0px -2px 0px 1px #ff7ab6",
                     }}
                   >
-                    <GitHubIcon className="w-5 h-5" />
+                    <PreviewIcon className="w-5 h-5" />
                   </Button>
-                )}
-              </div>
-            </li>
-          </div>
-        ))}
+                  {item.repository && (
+                    <Button
+                      href={item.repository}
+                      text="Code"
+                      style={{
+                        marginTop: "10px",
+                        width: "120px",
+                        borderColor: "#ff7ab6",
+                        boxShadow: "inset 0px -2px 0px 1px #ff7ab6",
+                      }}
+                    >
+                      <GitHubIcon className="w-5 h-5" />
+                    </Button>
+                  )}
+                </div>
+              </li>
+            </div>
+          );
+        })}
       </ol>
     </div>
   );
