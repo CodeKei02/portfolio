@@ -24,5 +24,4 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-public/keilin-photo.png
 public/models/
