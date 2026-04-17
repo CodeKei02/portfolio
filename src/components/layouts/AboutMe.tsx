@@ -1,5 +1,7 @@
 import { Title } from "../react/Title.tsx";
 import { LinkedInButton } from "./LinkedInButton.tsx";
+const ME_PHOTO = "/keilin-photo.png";
+
 export const AboutMe = ({
   title,
   language,
@@ -14,7 +16,7 @@ export const AboutMe = ({
         <div className="relative mx-auto mt-6 mb-6 w-52 h-52">
           <div className="absolute inset-0 rounded-full border-2 border-pink-500/80 animate-[spin_6s_linear_infinite]"></div>
           <img
-            src="/keilin-photo.png"
+            src={ME_PHOTO}
             alt="Keilin Escobar"
             loading="lazy"
             className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full z-10 object-cover"
