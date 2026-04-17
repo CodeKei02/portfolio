@@ -10,8 +10,6 @@ export const AboutMe = ({
   title: string;
   language: string;
 }) => {
-  const showContactMe =
-    String(import.meta.env.PUBLIC_SHOW_CONTACTME).toLowerCase() === "true";
   return (
     <div className="w-[90%] mx-auto h-auto py-10 px-4 text-white">
       <Title text={title} id="aboutMe" />
