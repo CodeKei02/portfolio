@@ -22,8 +22,9 @@ export interface Titles {
 export interface ExperienceItem {
   date: string;
   title: string;
-  company: string;
+  company_name?: string;
   description: string;
+  url?: string;
 }
 
 export interface ProjectItem {

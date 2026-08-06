@@ -17,6 +17,13 @@
   },
   "experiences": [
     {
+      "date": "April 2026",
+      "company_name": "Village of the Greenville",
+      "title": "Front-End Developer & UI/UX Designer",
+      "description": "I worked with Paul, a client from the United States, on a freelance basis. The main goal of the project was to create a website focused on the real estate and residential sector, specifically oriented towards renting and managing houses and apartments, with fast and easy access to the contact channels. For this development I used Astro, creating a modern, responsive interface focused on providing a clear and intuitive experience for users. The site was deployed on Cloudflare. The client also wanted a CMS so he could change certain aspects of the website without touching code, so I chose Keystatic because its interface is easy to understand and use.",
+      "url": "vogliving.com"
+    },
+    {
       "date": "September 2025",
       "title": "Front-End Developer",
       "description": "Together with a Backend developer, we were responsible for developing the frontend layer of a multi-tenant raffle platform using monorepo and micro front-end architecture, allowing multiple independent instances to be deployed with shared code. Implemented a monorepo with Nx to manage multiple independent frontend applications. Designed and developed a reusable component system with Astro and Tailwind. Integrated with Supabase. Implemented payment flows and ticket management. The technologies used include Astro, React, TypeScript, and Supabase.",
